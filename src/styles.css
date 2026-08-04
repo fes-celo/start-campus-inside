@@ -149,4 +149,130 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
   }
+
+  :root {
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  }
+}
+
+@layer components {
+  /* Press feedback for pressable elements (CTAs, links).
+     Property list is explicit (not `transition: all`) so this single
+     declaration can also own each element's hover opacity/color change —
+     splitting it across a Tailwind transition-* utility would let that
+     utility's higher-priority `@layer utilities` rule silently overwrite
+     transition-property and drop the transform transition entirely. */
+  .press-feedback {
+    transition-property: transform, opacity, background-color, border-color;
+    transition-duration: 160ms;
+    transition-timing-function: var(--ease-out);
+  }
+  .press-feedback:active {
+    transform: scale(0.97);
+  }
+
+  /* Story card hover: signals the card is interactive */
+  .story-thumb {
+    transition: transform 250ms var(--ease-out);
+  }
+  .story-play {
+    transition: transform 200ms var(--ease-out);
+  }
+  /* Rotation is a state change for an element already on screen (A → B),
+     not an entrance, so it gets ease-in-out rather than ease-out. */
+  .story-arrow {
+    transition: transform 200ms var(--ease-in-out);
+  }
+  /* Underline reveal: a bar growing in from a fixed edge, not an object
+     scaling from a point, so this isn't the "never scale(0)" case —
+     it's the same idiom as a progress bar or an expanding divider. */
+  .story-link-text {
+    position: relative;
+    display: inline-block;
+  }
+  .story-link-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 200ms var(--ease-out);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .story-card:hover .story-thumb {
+      transform: scale(1.04);
+    }
+    .story-card:hover .story-play {
+      transform: scale(1.08);
+    }
+    /* Scoped to the link itself, not .story-card — the arrow and
+       underline are feedback on the "Watch Story" link specifically. */
+    .story-link:hover .story-arrow {
+      transform: rotate(-45deg);
+    }
+    .story-link:hover .story-link-text::after {
+      transform: scaleX(1);
+    }
+  }
+
+  /* Section reveal on scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 500ms var(--ease-out),
+      transform 500ms var(--ease-out);
+  }
+  .reveal[data-visible="true"] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Staggered grid item entrance */
+  .reveal-item {
+    opacity: 0;
+    transform: scale(0.96);
+    transition:
+      opacity 400ms var(--ease-out),
+      transform 400ms var(--ease-out);
+  }
+  .reveal-item[data-visible="true"] {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .press-feedback:active {
+      transform: none;
+    }
+    .story-thumb,
+    .story-play,
+    .story-arrow {
+      transition: none;
+    }
+    /* Keep the arrow/underline affordance but drop the animated
+       change — they still appear on hover, just instantly. Unlike the
+       thumb/play scale, these are small in-place changes, not the kind
+       of motion prefers-reduced-motion exists to suppress. */
+    .story-link-text::after {
+      transition: none;
+    }
+    .reveal,
+    .reveal-item {
+      transform: none;
+      transition: opacity 300ms ease;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: reduce) {
+    .story-card:hover .story-thumb,
+    .story-card:hover .story-play {
+      transform: none;
+    }
+  }
 }

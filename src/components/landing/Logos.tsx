@@ -31,17 +31,11 @@ export function StartCampusLogo({
 
 export function DataCloudAwardsLogo({ className = "" }: { className?: string }) {
   return (
-    <div className={`text-center ${className}`}>
-      <p className="text-[10px] font-semibold tracking-[0.2em] text-[#e0a800]">★★★★★</p>
-      <p className="text-sm font-bold leading-tight text-foreground">
-        DATACLOUD
-        <br />
-        AWARDS
-      </p>
-      <p className="mt-1 text-[10px] font-semibold text-muted-foreground">
-        Best Data Centre in Europe
-      </p>
-    </div>
+    <img
+      src="/datacloud-awards-logo.svg"
+      alt="DataCloud Awards - Best Data Centre in Europe"
+      className={`h-12 w-auto ${className}`}
+    />
   );
 }
 

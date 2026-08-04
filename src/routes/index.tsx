@@ -30,16 +30,20 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="mx-auto w-full max-w-[1152px] px-4 py-6 sm:px-6 sm:py-8">
-      <div className="space-y-12 sm:space-y-20 lg:space-y-28">
+    <>
+      <div className="flex min-h-[80dvh] flex-col p-4 sm:p-6 lg:min-h-[100dvh]">
         <Hero />
-        <Initiative />
-        <Stories />
-        <LifeInside />
-        <StandOut />
-        <FinalCta />
       </div>
-      <SiteFooter />
-    </main>
+      <main className="mx-auto w-full max-w-[1152px] px-4 pb-6 sm:px-6 sm:pb-8">
+        <div className="space-y-12 pt-12 sm:space-y-20 sm:pt-20 lg:space-y-28 lg:pt-28">
+          <Initiative />
+          <Stories />
+          <LifeInside />
+          <StandOut />
+          <FinalCta />
+        </div>
+        <SiteFooter />
+      </main>
+    </>
   );
 }

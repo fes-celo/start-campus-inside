@@ -56,7 +56,7 @@ Centered H2: "Stories from the inside" (36px bold)
 
 - Name/title, bold 16px: "Márcio Reis | Site Operations Manager" / "Luís Marques | Senior Project Manager" / "Francisca Meneses | Program Manager"
 
-- Italic quote, 14px light italic: 
+- Italic quote, 14px light italic:
 
   1. "Keeping a data center running isn't about reacting to problems - it's about making sure they never happen in the first place."
 
