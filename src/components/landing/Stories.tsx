@@ -1,4 +1,5 @@
-import { ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
 import { PlayIcon } from "./Logos";
 import { Reveal } from "./Reveal";
 
@@ -18,9 +19,47 @@ const stories = [
     quote:
       "Between the first idea and the final build, there's a complex process of planning, coordination and decisions that shape everything that follows.",
   },
+  {
+    name: "Ana Silva | Operations Lead",
+    quote:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    name: "Rui Costa | Engineering Manager",
+    quote:
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+  {
+    name: "Sofia Mendes | Sustainability Director",
+    quote:
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  },
+  {
+    name: "Tiago Ferreira | Network Architect",
+    quote:
+      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  },
+  {
+    name: "Mariana Gomes | Security Specialist",
+    quote:
+      "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.",
+  },
+  {
+    name: "Pedro Alves | Project Director",
+    quote:
+      "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+  },
+  {
+    name: "Inês Ribeiro | Talent & Culture Lead",
+    quote:
+      "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+  },
 ];
 
 export function Stories() {
+  const [showAll, setShowAll] = useState(false);
+  const visibleStories = showAll ? stories : stories.slice(0, 3);
+
   return (
     <Reveal>
       <section id="stories">
@@ -28,7 +67,7 @@ export function Stories() {
           Stories from the inside
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {stories.map((story, index) => (
+          {visibleStories.map((story, index) => (
             <Reveal key={story.name} variant="item" delay={index * 70}>
               <article className="story-card flex flex-col overflow-hidden rounded-[10px] bg-card">
                 <div className="relative overflow-hidden">
@@ -56,7 +95,22 @@ export function Stories() {
             </Reveal>
           ))}
         </div>
+        <div className="mt-10 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setShowAll((prev) => !prev)}
+            className="press-feedback inline-flex h-14 items-center gap-2 rounded-[10px] bg-primary px-8 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            {showAll ? "Show fewer episodes" : "Show all episodes"}
+            {showAll ? (
+              <ChevronUp className="h-4 w-4" aria-hidden="true" />
+            ) : (
+              <ChevronDown className="h-4 w-4" aria-hidden="true" />
+            )}
+          </button>
+        </div>
       </section>
     </Reveal>
   );
 }
+
