@@ -1,3 +1,6 @@
+import startCampusLogo from "@/assets/startcampus-logo.svg.asset.json";
+import startCampusLogoLight from "@/assets/startcampus-logo-light.svg.asset.json";
+
 export function StartCampusLogo({
   className = "",
   light = false,
@@ -6,26 +9,11 @@ export function StartCampusLogo({
   light?: boolean;
 }) {
   return (
-    <div className={`flex items-center gap-2 ${className}`}>
-      <span
-        className={`grid h-8 w-8 shrink-0 place-items-center rounded-[8px] border-2 ${
-          light ? "border-primary-foreground" : "border-primary"
-        }`}
-      >
-        <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
-          <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" fill="#12bd64" />
-        </svg>
-      </span>
-      <span
-        className={`text-sm font-bold leading-[1.05] ${
-          light ? "text-primary-foreground" : "text-foreground"
-        }`}
-      >
-        Start
-        <br />
-        Campus
-      </span>
-    </div>
+    <img
+      src={light ? startCampusLogoLight.url : startCampusLogo.url}
+      alt="Start Campus"
+      className={`h-10 w-auto sm:h-12 ${className}`}
+    />
   );
 }
 
