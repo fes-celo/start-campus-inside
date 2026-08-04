@@ -33,7 +33,7 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-teal/40" aria-hidden="true" />
       <div className="relative flex flex-1 flex-col px-4 pb-16 pt-6 sm:px-10 sm:pb-24 sm:pt-8">
-        <StartCampusLogo light />
+        <StartCampusLogo light className="self-start" />
         <div className="mx-auto my-auto max-w-2xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-primary">
             Start Campus presents
