@@ -3,7 +3,7 @@ import { DataCloudAwardsLogo, StartCampusLogo } from "./Logos";
 export function SiteFooter() {
   return (
     <footer className="py-12 text-center">
-      <div className="flex flex-wrap items-center justify-center gap-10">
+      <div className="mt-8 flex flex-wrap items-center justify-center gap-10">
         <StartCampusLogo />
         <DataCloudAwardsLogo />
       </div>
