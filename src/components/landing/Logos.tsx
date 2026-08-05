@@ -30,9 +30,13 @@ export function DataCloudAwardsLogo({ className = "" }: { className?: string }) 
 export function PlayIcon({ className = "" }: { className?: string }) {
   return (
     <span
-      className={`grid h-14 w-14 place-items-center rounded-full bg-teal/60 backdrop-blur-sm ${className}`}
+      className={`flex h-14 w-14 items-center justify-center rounded-full bg-teal/60 backdrop-blur-sm ${className}`}
     >
-      <svg viewBox="0 0 24 24" className="ml-1 h-6 w-6 fill-primary-foreground" aria-hidden="true">
+      <svg
+        viewBox="0 0 24 24"
+        className="h-6 w-6 translate-x-[2px] fill-primary-foreground"
+        aria-hidden="true"
+      >
         <path d="M8 5v14l11-7z" />
       </svg>
     </span>
