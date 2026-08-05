@@ -1,5 +1,5 @@
-import startCampusLogo from "@/assets/startcampus-logo.svg.asset.json";
-import startCampusLogoLight from "@/assets/startcampus-logo-light.svg.asset.json";
+import startCampusLogo from "@/assets/startcampus-logo.svg";
+import startCampusLogoLight from "@/assets/startcampus-logo-light.svg";
 
 export function StartCampusLogo({
   className = "",
@@ -10,7 +10,7 @@ export function StartCampusLogo({
 }) {
   return (
     <img
-      src={light ? startCampusLogoLight.url : startCampusLogo.url}
+      src={light ? startCampusLogoLight : startCampusLogo}
       alt="Start Campus"
       className={`h-10 w-auto sm:h-12 ${className}`}
     />

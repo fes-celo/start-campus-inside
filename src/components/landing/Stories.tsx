@@ -2,75 +2,75 @@ import { useState } from "react";
 import { ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
 import { PlayIcon } from "./Logos";
 import { Reveal } from "./Reveal";
-import thumbMarcio from "@/assets/thumb-MarcioReis.png.asset.json";
-import thumbLuis from "@/assets/thumb-LuisMarques.png.asset.json";
-import thumbFrancisca from "@/assets/thumb-FranciscaMeneses.png.asset.json";
-import thumbJoao from "@/assets/thumb-JoaoVilaLuz.png.asset.json";
-import thumbIndia from "@/assets/thumb-IndiaOliveira.png.asset.json";
-import thumbAna from "@/assets/thumb-AnaJorge.png.asset.json";
-import thumbVania from "@/assets/thumb-VaniaAgostinho.png.asset.json";
-import thumbCarolina from "@/assets/thumb-CarolinaGoetz.png.asset.json";
-import thumbJuliana from "@/assets/thumb-JulianaMizumoto.png.asset.json";
-import thumbMargarida from "@/assets/thumb-MargaridaParedes.png.asset.json";
+import thumbMarcio from "@/assets/thumb-MarcioReis.png";
+import thumbLuis from "@/assets/thumb-LuisMarques.png";
+import thumbFrancisca from "@/assets/thumb-FranciscaMeneses.png";
+import thumbJoao from "@/assets/thumb-JoaoVilaLuz.png";
+import thumbIndia from "@/assets/thumb-IndiaOliveira.png";
+import thumbAna from "@/assets/thumb-AnaJorge.png";
+import thumbVania from "@/assets/thumb-VaniaAgostinho.png";
+import thumbCarolina from "@/assets/thumb-CarolinaGoetz.png";
+import thumbJuliana from "@/assets/thumb-JulianaMizumoto.png";
+import thumbMargarida from "@/assets/thumb-MargaridaParedes.png";
 
 const stories = [
   {
     name: "Márcio Reis | Site Operations Manager",
-    image: thumbMarcio.url,
+    image: thumbMarcio,
     quote:
       "Keeping a data center running isn’t about reacting to problems - it’s about making sure they never happen in the first place.",
   },
   {
     name: "Luís Marques | Senior Project Manager",
-    image: thumbLuis.url,
+    image: thumbLuis,
     quote:
       "Before anything goes live, every system is tested, validated and pushed to its limits - because failure is not an option.",
   },
   {
     name: "Francisca Meneses | Program Manager",
-    image: thumbFrancisca.url,
+    image: thumbFrancisca,
     quote:
       "Between the first idea and the final build, there’s a complex process of planning, coordination and decisions that shape everything that follows.",
   },
   {
     name: "João Vila Luz | Energy Market Operation Specialist",
-    image: thumbJoao.url,
+    image: thumbJoao,
     quote:
       "Behind every data center, there’s a constant balance between energy demand, the grid and the market that keeps everything running.",
   },
   {
     name: "India Oliveira | Sustainability Manager",
-    image: thumbIndia.url,
+    image: thumbIndia,
     quote:
       "Sustainability here isn’t a layer added at the end - it’s part of every decision, from design to daily operations.",
   },
   {
     name: "Ana Jorge | Health, Safety and Environment Manager",
-    image: thumbAna.url,
+    image: thumbAna,
     quote:
       "A lot of what keeps a campus like this safe is invisible - planning, prevention and constant attention to risk.",
   },
   {
     name: "Vânia Agostinho | Data Center Security Specialist",
-    image: thumbVania.url,
+    image: thumbVania,
     quote:
       "Security starts long before you enter the building - it’s in every layer, every system and every access point.",
   },
   {
     name: "Carolina Goetz | Information Security Specialist",
-    image: thumbCarolina.url,
+    image: thumbCarolina,
     quote:
       "Technology matters, but most security risks still come down to people and how they handle information.",
   },
   {
     name: "Juliana Mizumoto | Head of BID Management",
-    image: thumbJuliana.url,
+    image: thumbJuliana,
     quote:
       "Turning complex infrastructure into clear solutions means connecting engineering, business and client needs in a way that makes sense.",
   },
   {
     name: "Margarida Paredes | Procurement Manager",
-    image: thumbMargarida.url,
+    image: thumbMargarida,
     quote:
       "Sines is more than a location - it’s a strategic point for how Europe builds and scales its digital future.",
   },

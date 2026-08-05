@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Reveal } from "./Reveal";
-import campusVideo from "@/assets/start-campus.mp4.asset.json";
+import campusVideo from "@/assets/start-campus.mp4";
 
 export function StandOut() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -55,7 +55,7 @@ export function StandOut() {
         <div className="relative overflow-hidden rounded-[10px]">
           <video
             ref={videoRef}
-            src={campusVideo.url}
+            src={campusVideo}
             className="aspect-[8/5] w-full object-cover"
             autoPlay
             muted
