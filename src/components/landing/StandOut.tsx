@@ -10,7 +10,7 @@ export function StandOut() {
             Current opportunities
           </p>
           <h2 className="mt-3 text-3xl font-bold text-foreground sm:text-[36px]">Stand out</h2>
-          <p className="mt-5 text-base leading-[26px] text-foreground">
+          <p className="mt-5 text-base leading-[125%] text-foreground">
             Start Campus is growing, and we're building teams with different backgrounds,
             experiences and perspectives. If you're looking to work on complex systems, take
             ownership and be part of something at scale, this is a place to do it.

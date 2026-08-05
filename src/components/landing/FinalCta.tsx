@@ -8,7 +8,7 @@ export function FinalCta() {
           <h2 className="text-3xl font-bold text-teal-foreground sm:text-[36px]">
             The faces behind the infrastructure
           </h2>
-          <p className="mt-4 max-w-xl text-base font-light leading-relaxed text-teal-foreground/85">
+          <p className="mt-4 max-w-xl text-base font-light leading-[125%] text-teal-foreground/85">
             Take a closer look at how this campus works, and the people behind it. Explore the
             series or reach out to the team.
           </p>
