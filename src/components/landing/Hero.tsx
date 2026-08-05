@@ -42,8 +42,8 @@ export function Hero() {
             Start Inside Out
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-base font-light leading-[125%] text-primary-foreground/90 sm:text-lg">
-            This 1.2GW campus is setting a new standard for global digital infrastructure. But scale
-            isn't what defines it - the people running it are. Welcome to the core of our
+            Sines AI ready data center is setting a new standard for global digital infrastructure.
+            But scale isn't what defines it - the people running it are. Welcome to the core of our
             operations.
           </p>
           <a
