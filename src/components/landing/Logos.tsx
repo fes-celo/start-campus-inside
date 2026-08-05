@@ -34,7 +34,7 @@ export function PlayIcon({ className = "" }: { className?: string }) {
     >
       <svg
         viewBox="0 0 24 24"
-        className="h-6 w-6 translate-x-[-6px] fill-primary-foreground"
+        className="h-6 w-6 translate-x-[-2px] fill-primary-foreground"
         aria-hidden="true"
       >
         <path d="M8 5v14l11-7z" />
