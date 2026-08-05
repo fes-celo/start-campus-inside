@@ -1,12 +1,12 @@
 import { Reveal } from "./Reveal";
-import teamPhoto from "@/assets/team-photo.webp.asset.json";
+import teamPhoto from "@/assets/team-photo.webp";
 
 export function Initiative() {
   return (
     <Reveal>
       <section className="grid items-center gap-10 md:grid-cols-2 md:gap-14">
         <img
-          src={teamPhoto.url}
+          src={teamPhoto}
           alt="The Start Campus team gathered outside the data centre campus"
           loading="lazy"
           className="aspect-[5/4] w-full rounded-[10px] object-cover"
