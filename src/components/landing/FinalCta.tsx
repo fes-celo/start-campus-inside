@@ -23,7 +23,7 @@ export function FinalCta() {
           <img
             src="/datacloud-awards-2026.png"
             alt="DataCloud Awards trophy - Best Data Centre in Europe"
-            className="h-48 w-auto object-contain mix-blend-plus-lighter"
+            className="h-[270px] w-auto object-contain mix-blend-plus-lighter"
           />
         </div>
       </section>
