@@ -1,10 +1,40 @@
+import { useEffect, useRef } from "react";
 import { Reveal } from "./Reveal";
 import campusVideo from "@/assets/start-campus.mp4.asset.json";
 
 export function StandOut() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    const video = videoRef.current;
+    if (!section || !video) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            void video.play();
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(section);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Reveal>
-      <section className="grid items-center gap-10 md:grid-cols-2 md:gap-14">
+      <section
+        ref={sectionRef}
+        className="grid items-center gap-10 md:grid-cols-2 md:gap-14"
+      >
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-primary">
             Current opportunities
@@ -24,11 +54,14 @@ export function StandOut() {
         </div>
         <div className="relative overflow-hidden rounded-[10px]">
           <video
+            ref={videoRef}
             src={campusVideo.url}
             className="aspect-[8/5] w-full object-cover"
-            controls
+            autoPlay
+            muted
+            loop
             playsInline
-            preload="metadata"
+            preload="auto"
           />
         </div>
       </section>
