@@ -7,7 +7,7 @@ const stories = [
   {
     name: "Márcio Reis | Site Operations Manager",
     quote:
-      "Keeping a data center running isn't about reacting to problems - it's about making sure they never happen in the first place.",
+      "Keeping a data center running isn’t about reacting to problems - it’s about making sure they never happen in the first place.",
   },
   {
     name: "Luís Marques | Senior Project Manager",
@@ -17,42 +17,42 @@ const stories = [
   {
     name: "Francisca Meneses | Program Manager",
     quote:
-      "Between the first idea and the final build, there's a complex process of planning, coordination and decisions that shape everything that follows.",
+      "Between the first idea and the final build, there’s a complex process of planning, coordination and decisions that shape everything that follows.",
   },
   {
-    name: "João Vila Luz | Energy Specialist",
+    name: "João Vila Luz | Energy Market Operation Specialist",
     quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Behind every data center, there’s a constant balance between energy demand, the grid and the market that keeps everything running.",
   },
   {
     name: "India Oliveira | Sustainability Manager",
     quote:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Sustainability here isn’t a layer added at the end - it’s part of every decision, from design to daily operations.",
   },
   {
-    name: "Ana Jorge | HSE Manager",
+    name: "Ana Jorge | Health, Safety and Environment Manager",
     quote:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "A lot of what keeps a campus like this safe is invisible - planning, prevention and constant attention to risk.",
   },
   {
     name: "Vânia Agostinho | Data Center Security Specialist",
     quote:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Security starts long before you enter the building - it’s in every layer, every system and every access point.",
   },
   {
     name: "Carolina Goetz | Information Security Specialist",
     quote:
-      "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.",
+      "Technology matters, but most security risks still come down to people and how they handle information.",
   },
   {
-    name: "Juliana Mizumoto | Head of Bid Management",
+    name: "Juliana Mizumoto | Head of BID Management",
     quote:
-      "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+      "Turning complex infrastructure into clear solutions means connecting engineering, business and client needs in a way that makes sense.",
   },
   {
-    name: "Margarida Paredes | Procurement Manager",
+    name: "Caroline Romanski | Chief Corporate Officer",
     quote:
-      "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+      "Sines is more than a location - it’s a strategic point for how Europe builds and scales its digital future.",
   },
 ];
 
