@@ -7,7 +7,7 @@ export function SiteFooter() {
         <StartCampusLogo />
         <DataCloudAwardsLogo />
       </div>
-      <p className="mt-8 text-xs text-foreground/60">© 2026 Start Campus. All rights reserved.</p>
+      <p className="mt-8 text-xs leading-[125%] text-foreground/60">© 2026 Start Campus. All rights reserved.</p>
     </footer>
   );
 }

@@ -25,7 +25,7 @@ export function LifeInside() {
         <h2 className="text-center text-3xl font-bold text-card-foreground sm:text-[36px]">
           Life on the inside
         </h2>
-        <p className="mt-2 text-center text-base text-card-foreground">
+        <p className="mt-2 text-center text-base leading-[125%] text-card-foreground">
           What powers our operations
         </p>
         <div className="mt-12 grid gap-10 md:grid-cols-3">
@@ -36,7 +36,7 @@ export function LifeInside() {
                   <img src={icon} alt="" className="h-7 w-7" />
                 </span>
                 <h3 className="mt-5 text-xl font-bold text-card-foreground">{title}</h3>
-                <p className="mt-3 max-w-xs text-sm leading-relaxed text-card-foreground/80">
+                <p className="mt-3 max-w-xs text-sm leading-[125%] text-card-foreground/80">
                   {body}
                 </p>
               </div>

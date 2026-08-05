@@ -105,7 +105,7 @@ export function Stories() {
                 </div>
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="text-base font-bold text-card-foreground">{story.name}</h3>
-                  <p className="mt-3 flex-1 text-sm font-light italic leading-relaxed text-card-foreground/80">
+                  <p className="mt-3 flex-1 text-sm font-light italic leading-[125%] text-card-foreground/80">
                     {story.quote}
                   </p>
                   <a
