@@ -26,7 +26,7 @@ const HERO_SHADER_CONFIG: Partial<HeroShaderConfig> = {
 
 export function Hero() {
   return (
-    <section className="relative flex flex-1 flex-col overflow-hidden rounded-[10px]">
+    <section className="relative flex flex-1 flex-col overflow-hidden rounded-[10px] bg-[#1A3436]">
       <HeroShaderCanvas
         config={HERO_SHADER_CONFIG}
         className="absolute inset-0 h-full w-full pointer-events-none"
