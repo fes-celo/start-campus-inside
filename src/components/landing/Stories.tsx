@@ -20,37 +20,37 @@ const stories = [
       "Between the first idea and the final build, there's a complex process of planning, coordination and decisions that shape everything that follows.",
   },
   {
-    name: "Ana Silva | Operations Lead",
+    name: "João Vila Luz | Energy Specialist",
     quote:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
-    name: "Rui Costa | Engineering Manager",
+    name: "India Oliveira | Sustainability Manager",
     quote:
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
   {
-    name: "Sofia Mendes | Sustainability Director",
+    name: "Ana Jorge | HSE Manager",
     quote:
       "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   },
   {
-    name: "Tiago Ferreira | Network Architect",
+    name: "Vânia Agostinho | Data Center Security Specialist",
     quote:
       "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   },
   {
-    name: "Mariana Gomes | Security Specialist",
+    name: "Carolina Goetz | Information Security Specialist",
     quote:
       "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.",
   },
   {
-    name: "Pedro Alves | Project Director",
+    name: "Juliana Mizumoto | Head of Bid Management",
     quote:
       "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
   },
   {
-    name: "Inês Ribeiro | Talent & Culture Lead",
+    name: "Margarida Paredes | Procurement Manager",
     quote:
       "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
   },
