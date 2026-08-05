@@ -1,5 +1,5 @@
-import { PlayIcon, StartCampusLogo } from "./Logos";
 import { Reveal } from "./Reveal";
+import campusVideo from "@/assets/start-campus.mp4.asset.json";
 
 export function StandOut() {
   return (
@@ -23,10 +23,13 @@ export function StandOut() {
           </a>
         </div>
         <div className="relative overflow-hidden rounded-[10px]">
-          <div aria-hidden="true" className="aspect-[8/5] w-full bg-neutral-800" />
-          <div className="absolute inset-0 bg-teal/20" aria-hidden="true" />
-          <StartCampusLogo light className="absolute left-4 top-4" />
-          <PlayIcon className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+          <video
+            src={campusVideo.url}
+            className="aspect-[8/5] w-full object-cover"
+            controls
+            playsInline
+            preload="metadata"
+          />
         </div>
       </section>
     </Reveal>
