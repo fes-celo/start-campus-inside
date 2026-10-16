@@ -13,7 +13,9 @@ export function FinalCta() {
             series or reach out to the team.
           </p>
           <a
-            href="#stories"
+            href="https://www.startcampus.pt/pt/contact"
+            target="_blank"
+            rel="noopener noreferrer"
             className="press-feedback mt-8 inline-flex h-12 items-center justify-center rounded-[10px] border-2 border-primary bg-transparent px-6 text-sm font-semibold text-teal-foreground hover:bg-primary"
           >
             Get in touch
