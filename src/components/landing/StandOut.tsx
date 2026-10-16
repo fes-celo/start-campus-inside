@@ -58,7 +58,7 @@ export function StandOut() {
           <video
             ref={videoRef}
             src={campusVideo}
-            className="aspect-[8/5] w-full object-cover"
+            className="aspect-video w-full object-cover"
             autoPlay
             muted
             loop
