@@ -13,30 +13,55 @@ import thumbCarolina from "@/assets/thumb-CarolinaGoetz.png";
 import thumbJuliana from "@/assets/thumb-JulianaMizumoto.png";
 import thumbMargarida from "@/assets/thumb-MargaridaParedes.png";
 
-const stories = [
-  {
-    name: "Márcio Reis | Site Operations Manager",
-    image: thumbMarcio,
-    quote:
-      "Keeping a data center running isn’t about reacting to problems - it’s about making sure they never happen in the first place.",
-  },
+type Story = {
+  name: string;
+  image: string;
+  quote: string;
+  url?: string;
+};
+
+const stories: Story[] = [
   {
     name: "Luís Marques | Senior Project Manager",
     image: thumbLuis,
     quote:
       "Before anything goes live, every system is tested, validated and pushed to its limits - because failure is not an option.",
+    url: "https://youtu.be/l-cknig_sdg",
   },
   {
     name: "Francisca Meneses | Program Manager",
     image: thumbFrancisca,
     quote:
       "Between the first idea and the final build, there’s a complex process of planning, coordination and decisions that shape everything that follows.",
+    url: "https://youtu.be/Ne_E-eWencE",
   },
   {
-    name: "João Vila Luz | Energy Market Operation Specialist",
-    image: thumbJoao,
+    name: "Márcio Reis | Site Operations Manager",
+    image: thumbMarcio,
     quote:
-      "Behind every data center, there’s a constant balance between energy demand, the grid and the market that keeps everything running.",
+      "Keeping a data center running isn’t about reacting to problems - it’s about making sure they never happen in the first place.",
+    url: "https://youtu.be/5VO0sGYPchY",
+  },
+  {
+    name: "Juliana Mizumoto | Head of BID Management",
+    image: thumbJuliana,
+    quote:
+      "Turning complex infrastructure into clear solutions means connecting engineering, business and client needs in a way that makes sense.",
+    url: "https://youtu.be/WXS3Oa73Qxk",
+  },
+  {
+    name: "Ana Jorge | Health, Safety and Environment Manager",
+    image: thumbAna,
+    quote:
+      "A lot of what keeps a campus like this safe is invisible - planning, prevention and constant attention to risk.",
+    url: "https://youtu.be/tind_WbL7FA",
+  },
+  {
+    name: "Carolina Goetz | Information Security Specialist",
+    image: thumbCarolina,
+    quote:
+      "Technology matters, but most security risks still come down to people and how they handle information.",
+    url: "https://youtu.be/fg8C6dOZH3Q",
   },
   {
     name: "India Oliveira | Sustainability Manager",
@@ -45,34 +70,24 @@ const stories = [
       "Sustainability here isn’t a layer added at the end - it’s part of every decision, from design to daily operations.",
   },
   {
-    name: "Ana Jorge | Health, Safety and Environment Manager",
-    image: thumbAna,
+    name: "João Vila Luz | Energy Market Operation Specialist",
+    image: thumbJoao,
     quote:
-      "A lot of what keeps a campus like this safe is invisible - planning, prevention and constant attention to risk.",
-  },
-  {
-    name: "Vânia Agostinho | Data Center Security Specialist",
-    image: thumbVania,
-    quote:
-      "Security starts long before you enter the building - it’s in every layer, every system and every access point.",
-  },
-  {
-    name: "Carolina Goetz | Information Security Specialist",
-    image: thumbCarolina,
-    quote:
-      "Technology matters, but most security risks still come down to people and how they handle information.",
-  },
-  {
-    name: "Juliana Mizumoto | Head of BID Management",
-    image: thumbJuliana,
-    quote:
-      "Turning complex infrastructure into clear solutions means connecting engineering, business and client needs in a way that makes sense.",
+      "Behind every data center, there’s a constant balance between energy demand, the grid and the market that keeps everything running.",
+    url: "https://youtu.be/u8nIf41YvXk",
   },
   {
     name: "Margarida Paredes | Procurement Manager",
     image: thumbMargarida,
     quote:
       "Sines is more than a location - it’s a strategic point for how Europe builds and scales its digital future.",
+    url: "https://youtu.be/9x7lJc4bVVM",
+  },
+  {
+    name: "Vânia Agostinho | Data Center Security Specialist",
+    image: thumbVania,
+    quote:
+      "Security starts long before you enter the building - it’s in every layer, every system and every access point.",
   },
 ];
 
@@ -91,30 +106,58 @@ export function Stories() {
             <Reveal key={story.name} variant="item" delay={index * 70}>
               <article className="story-card flex flex-col overflow-hidden rounded-[10px] bg-card">
                 <div className="relative overflow-hidden">
-                  <img
-                    src={story.image}
-                    alt={story.name}
-                    loading="lazy"
-                    className="story-thumb h-52 w-full object-cover"
-                  />
-                  <div
-                    className="absolute inset-0 bg-gradient-to-t from-teal/70 to-transparent"
-                    aria-hidden="true"
-                  />
-                  <PlayIcon className="story-play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+                  {story.url ? (
+                    <a
+                      href={story.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Watch ${story.name.split(" | ")[0]}'s story`}
+                      className="block"
+                    >
+                      <img
+                        src={story.image}
+                        alt={story.name}
+                        loading="lazy"
+                        className="story-thumb h-52 w-full object-cover"
+                      />
+                      <div
+                        className="absolute inset-0 bg-gradient-to-t from-teal/70 to-transparent"
+                        aria-hidden="true"
+                      />
+                      <PlayIcon className="story-play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+                    </a>
+                  ) : (
+                    <>
+                      <img
+                        src={story.image}
+                        alt={story.name}
+                        loading="lazy"
+                        className="story-thumb h-52 w-full object-cover"
+                      />
+                      <div
+                        className="absolute inset-0 bg-gradient-to-t from-teal/70 to-transparent"
+                        aria-hidden="true"
+                      />
+                      <PlayIcon className="story-play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+                    </>
+                  )}
                 </div>
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="text-base font-bold text-card-foreground">{story.name}</h3>
                   <p className="mt-3 flex-1 text-sm font-light italic leading-[125%] text-card-foreground/80">
                     {story.quote}
                   </p>
-                  <a
-                    href="#stories"
-                    className="story-link press-feedback -mb-3 mt-3 inline-flex items-center gap-2 py-3 text-sm font-semibold text-primary"
-                  >
-                    <span className="story-link-text">Watch Story</span>
-                    <ArrowRight className="story-arrow h-4 w-4" />
-                  </a>
+                  {story.url && (
+                    <a
+                      href={story.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="story-link press-feedback -mb-3 mt-3 inline-flex items-center gap-2 py-3 text-sm font-semibold text-primary"
+                    >
+                      <span className="story-link-text">Watch Story</span>
+                      <ArrowRight className="story-arrow h-4 w-4" />
+                    </a>
+                  )}
                 </div>
               </article>
             </Reveal>
@@ -138,4 +181,3 @@ export function Stories() {
     </Reveal>
   );
 }
-
