@@ -8,7 +8,6 @@ import thumbFrancisca from "@/assets/thumb-FranciscaMeneses.png";
 import thumbJoao from "@/assets/thumb-JoaoVilaLuz.png";
 import thumbIndia from "@/assets/thumb-IndiaOliveira.png";
 import thumbAna from "@/assets/thumb-AnaJorge.png";
-import thumbVania from "@/assets/thumb-VaniaAgostinho.png";
 import thumbCarolina from "@/assets/thumb-CarolinaGoetz.png";
 import thumbJuliana from "@/assets/thumb-JulianaMizumoto.png";
 import thumbMargarida from "@/assets/thumb-MargaridaParedes.png";
@@ -68,6 +67,7 @@ const stories: Story[] = [
     image: thumbIndia,
     quote:
       "Sustainability here isn’t a layer added at the end - it’s part of every decision, from design to daily operations.",
+    url: "https://youtu.be/_Oz2xuuO5Zc",
   },
   {
     name: "João Vila Luz | Energy Market Operation Specialist",
@@ -82,12 +82,6 @@ const stories: Story[] = [
     quote:
       "Sines is more than a location - it’s a strategic point for how Europe builds and scales its digital future.",
     url: "https://youtu.be/9x7lJc4bVVM",
-  },
-  {
-    name: "Vânia Agostinho | Data Center Security Specialist",
-    image: thumbVania,
-    quote:
-      "Security starts long before you enter the building - it’s in every layer, every system and every access point.",
   },
 ];
 
