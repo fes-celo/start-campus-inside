@@ -147,7 +147,7 @@ export function Stories() {
                   <p className="mt-3 flex-1 text-sm font-light italic leading-[125%] text-card-foreground/80">
                     {story.quote}
                   </p>
-                  {story.url && (
+                  {story.url ? (
                     <a
                       href={story.url}
                       target="_blank"
@@ -157,6 +157,8 @@ export function Stories() {
                       <span className="story-link-text">Watch Story</span>
                       <ArrowRight className="story-arrow h-4 w-4" />
                     </a>
+                  ) : (
+                    <div className="h-11" aria-hidden="true" />
                   )}
                 </div>
               </article>
