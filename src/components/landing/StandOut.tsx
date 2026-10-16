@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Reveal } from "./Reveal";
-import campusVideo from "@/assets/start-campus.mp4";
+import campusVideo from "@/assets/26_10_12_Power_Anim_web.mp4";
 
 export function StandOut() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -58,7 +58,7 @@ export function StandOut() {
           <video
             ref={videoRef}
             src={campusVideo}
-            className="aspect-[8/5] w-full object-cover"
+            className="aspect-video w-full object-cover"
             autoPlay
             muted
             loop
