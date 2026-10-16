@@ -46,7 +46,9 @@ export function StandOut() {
             ownership and be part of something at scale, this is a place to do it.
           </p>
           <a
-            href="#stories"
+            href="https://job-boards.greenhouse.io/startcampus#main"
+            target="_blank"
+            rel="noopener noreferrer"
             className="press-feedback mt-8 inline-flex h-12 items-center justify-center rounded-[10px] bg-primary px-6 text-sm font-semibold text-primary-foreground hover:opacity-90"
           >
             View Open Positions
