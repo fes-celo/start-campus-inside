@@ -21,10 +21,19 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://inside.startcampus.pt/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify([
+          { "@context": "https://schema.org", "@type": "Organization", name: "Start Campus", url: "https://www.startcampus.pt", logo: "https://inside.startcampus.pt/favicon.svg" },
+          { "@context": "https://schema.org", "@type": "WebSite", name: "Start Inside Out", url: "https://inside.startcampus.pt/", description },
+        ]),
+      },
+    ],
+    links: [{ rel: "canonical", href: "https://inside.startcampus.pt/" }],
   }),
 });
 
